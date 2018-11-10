@@ -1,0 +1,38 @@
+import app.Item
+import app.Order
+dialect  "mvel"
+
+rule "Blue Pen and Quantity Greater Than 10"
+    when
+        item : Item(name == "Blue Pen", quantity > 10)
+    then
+        item.setPrice(2.5);
+end
+
+rule "Red Pen and Quantity Greater Than 10"
+    when
+        item : Item(name == "Red Pen", quantity > 10)
+    then
+        item.setPrice(3.0);
+end
+
+rule "Blue Pen and Quantity Less Than 11"
+    when
+        item : Item(name == "Blue Pen", quantity <= 10)
+    then
+        item.setPrice(3.0);
+end
+
+rule "Red Pen and Quantity Less Than 11"
+    when
+        item : Item(name == "Red Pen", quantity <= 10)
+    then
+        item.setPrice(3.5);
+end
+
+rule "Apply Discount"
+    when
+        order : Order(total > 100)
+    then
+        order.setDiscount(0.15);
+end
