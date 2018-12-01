@@ -1,5 +1,5 @@
 # billing-system
-simple billing system that implements Drools
+This is a simple billing system that implements the Drools rule engine.
 
 
 Usage:
