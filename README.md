@@ -1,5 +1,5 @@
 # billing-system
-This is a simple billing system that implements the Drools rule engine.
+This is a simple billing system written in Java that implements the Drools rule engine.
 
 
 Usage:
